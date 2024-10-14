@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&display=swap');
+
+*{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    background-color: #252525;
+    user-select: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #353535;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6f2cf5;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+.back{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem 20rem;
+    filter: blur(200px);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.back span{
+    width: 100%;
+    height: 200px;
+}
+
+.heroSection{
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandArea{
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    background: none;
+}
+
+.brandArea h1 {
+    font-size: 48px;
+    color: white;
+    background: none;
+    font-style: italic; /* Yazıyı italik yapar */
+}
+
+
+.brandArea p{
+    font-size: 48px;
+    background: none;
+    background: -webkit-linear-gradient(225deg, #6e0303, #548eba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Genel ayarlar - HTML ve Body */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Yatay kaydırmayı engellemek için */
+}
+
+/* Brand Container */
+.brandContainer {
+    display: inline-flex; /* Elemanları yan yana hizalar */
+    align-items: center; /* Elemanları dikey olarak ortalar */
+    background: none; /* Arka plan rengini kaldırır */
+    padding: 0; /* İstenmeyen iç dolgu varsa sıfırlanır */
+    margin: 0; /* Container'dan kaynaklanan olası marginler sıfırlandı */
+    gap: 0; /* Aradaki boşlukları manuel olarak kontrol etmek için sıfırlandı */
+}
+
+/* Markanın Stil Düzenlemesi */
+.brand {
+    margin: 0; /* Markadan kaynaklanan olası boşlukları sıfırlar */
+    font-size: 24px;
+    color: #790ddd;
+    background: none; /* Arka plan rengini kaldırır */
+    vertical-align: middle; /* Dikey olarak ortalamak için */
+}
+
+/* İkon Linkler */
+.icon-link {
+    margin-left: 0.4rem; /* İkonların yazıya olan mesafesini ayarlar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    background: none; /* İkonların arka plan rengini kaldırır */
+}
+
+/* İkon Görseller */
+.icon-image {
+    width: 20px; /* İkon genişliği küçültüldü */
+    height: 20px; /* İkon yüksekliği küçültüldü */
+    max-width: 100%; /* Görsellerin konteyneri aşmasını önler */
+    vertical-align: middle; /* Yazıya hizalanması için */
+    transition: transform 0.3s ease; /* Üzerine gelindiğinde dönüşüm efekti */
+}
+
+
+
+
+
+
+.brandArea button{
+    outline: none;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 2rem;
+    border: 1px solid white;
+    background: none;
+    box-shadow: inset 0px 0px 10px white;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.brandArea button:hover{
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+    box-shadow: inset 0px 0px 20px white, 0px 0px 10px white;
+}
+
+.brandArea button a{
+    background: none;
+    color: white;
+    text-decoration: none;
+}
+
+nav{
+    width: calc(100% - 10rem);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+    position: absolute;
+    top:0;
+    align-items: center;
+    z-index: 3;
+    background: none;
+}
+
+nav .brand{
+    background: none;
+    background: -webkit-linear-gradient(225deg,  #c70303,hwb(202 62% 7%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    background: none;
+}
+
+nav ul li{
+    background: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    background: none;
+}
+
+.projectList{
+    position: absolute;
+    z-index: 3;
+    height: 200px;
+    width: 120%;
+    rotate: -5deg;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateX(-5rem);
+    overflow: hidden;
+}
+
+.projectList a{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    transition: ease .3s;
+    text-decoration: none;
+    right: 0;
+}
+
+.lastProjects{
+    color: white;
+    font-weight: 300;
+    rotate: -5deg;
+    position: relative;
+    z-index: 4;
+    transform: translateX(5rem);
+    background: none;
+}
+
+.aboutSection{
+    width: 100%;
+    transform: translateY(150px);
+    height: calc(100dvh + 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutBack{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem 20rem;
+    filter: blur(200px);
+    position: absolute;
+    z-index: 2;
+}
+
+.aboutBack span{
+    width: 100%;
+    height: 200px;
+}
+
+.aboutArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    position: relative;
+    background:none;
+    z-index: 3;
+}
+
+.aboutArea img{
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.aboutArea .areaMain{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 0 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutArea .areaMain h2{
+    background: none;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 22px;
+    color: black
+}
+
+.aboutArea .areaMain span{
+    width: 70%;
+    height: 1px;
+    background-color: #790ddd;
+    display: block;
+}
+
+.aboutArea .areaMain p{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    background: none;
+    font-size: 18px;
+    padding-right: 2rem;
+}
+
+.aboutArea .areaMain p i{
+    background: none;
+    width: 20px;
+}
+
+.skills{
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    padding-bottom: 5rem;
+}
+
+.Column{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    width: 100%;
+}
+
+.Column h2{
+    background: none;
+    margin-left: 1rem;
+    color: white;
+    margin-bottom: .5rem;
+}
+
+.skillbg{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: all ease .5s;
+    background: none;
+    color: white;
+}
+
+.skills-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 5;
+    
+    width: 100%;
+    background: none;
+    gap: 2rem;
+  }
+  
+  .skillArea {
+    position: relative;
+    transition: transform 0.8s ease-out;
+    width: 80%;
+    transform: translateX(-150%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    background-color: rgba(37, 37, 37, .6);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.skill{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: none;
+}
+
+.skill img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background: none;
+    border-radius: .5rem;
+}
+
+.skill h3{
+    color: white;
+    text-align: center;
+    background: none;
+}
+
+.projects{
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.enter-from-right {
+    transform: none;
+}
+
+.projects h1{
+    color: white;
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    font-size: 48px;
+    background: none;
+    opacity: 0;
+    transition: ease .3s;
+}
+
+.projectCards{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: 5;
+    background: none;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.projectCard {
+    background-color: #303030;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    height: 500px;
+    scale: 0;
+    rotate: -180deg;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+
+
+.projectCard img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 2px solid #790ddd;
+}
+.contentP{
+    font-size: 1.5vh;
+}
+
+.projectCard .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+}
+
+.projectCard .content .contentMain{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: none;
+}
+
+.projectCard .content .contentMain h2{
+    color: white;
+    background: none;
+    margin-left: 1rem;
+}
+
+.projectCard .content .contentMain span{
+    width: 100%;
+    height: 1px;
+    background-color: #790ddd;
+    display: block;
+}
+
+.projectCard .content .contentMain p{
+    background: none;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.projectCard .content .contentMain p i{
+    width: 30px;
+    background: none;
+}
+
+.projectCard .content a{
+    background: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #0692c9;
+}
+
+.projectCard:hover{
+    scale: 1.1;
+}
+
+.flexArea{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.flexArea button{
+    outline: none;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 2rem;
+    border: 1px solid white;
+    background: none;
+    box-shadow: inset 0px 0px 10px white;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.flexArea button:hover{
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+    box-shadow: inset 0px 0px 20px white, 0px 0px 10px white;
+}
+
+.flexArea button a{
+    background: none;
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+    opacity: .7;
+}
+
+.scrollTop{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 10;
+    transition: ease .3s;
+}
+
+.scrollTop a{
+    text-decoration: none;
+    color: white;
+    background: none;
+    font-size: 25px;
+}
+
+.scrollTop a i{
+    background: none;
+}
+
+@media (max-width: 1100px) {
+    .brandArea h1, .brandArea p{
+        font-size: 36px;
+    }
+    .brandArea button, .flexArea button{
+        font-size: 12px;
+    }
+    .projectList a{
+        font-size: 20px;
+    }
+    .aboutArea{
+        flex-direction: column;
+    }
+    .aboutArea img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        transform: translateY(50%);
+    }
+    .aboutArea .Column h2{
+        display: none;
+    }
+    .aboutArea .Column .areaMain{
+        border-radius: 1rem;
+        align-items: center;
+        height: auto;
+        padding-top: calc(75px + 1rem);
+        padding-bottom: 1rem;
+    }
+    .aboutArea .Column .areaMain h2{
+        display: block;
+    }
+    .aboutArea .Column .areaMain p{
+        font-size: 16px;
+    }
+    .skillArea{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .projectCards{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem 4rem;
+    }
+    .projectCard .content .contentMain p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .brandArea h1, .brandArea p{
+        font-size: 28px;
+    }
+    .projectList a{
+        font-size: 14px;
+    }
+    .projectList{
+        height: 100px;
+    }
+    .skillArea{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .projectCards{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .projectCard{
+        height: 600px;
+    }
+    nav .brand{
+        font-size: 18px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+    .lastProjects{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    nav .brand{
+        display: none;
+    }
+    nav{
+        justify-content: center;
+    }
+    .brandArea h1, .brandArea p{
+        font-size: 20px;
+    }
+    .brandArea button, .flexArea button{
+        font-size: 9px;
+    }
+    .projectList a{
+        font-size: 10px;
+    }
+    .skillArea{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .projectCards{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .projectCard{
+        height: 500px;
+    }
+}
